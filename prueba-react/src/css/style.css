@@ -28,26 +28,21 @@
     color: rgb(255, 255, 255);
 }
 
-.tabla
-{
-    color: rgb(255, 255, 255);
-    border-collapse: collapse; /* Unifica los bordes de la tabla y las celdas */
-    width: 100%; /* Opcional: ajusta el ancho de la tabla */
+.tabla-recetas {
+  width: 100%;
+  border-collapse: collapse;
+  color: white;
+  font-family: Georgia, 'Times New Roman', serif;
 }
-.form-group {
-  display: flex;
-  align-items: center;
-  gap: 15px; /* Espacio entre el label y el input dentro del grupo */
+
+.tabla-recetas th,
+.tabla-recetas td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
 }
-.form-row {
-  display: flex;
-  gap: 20px; /* Espacio entre los grupos de input/label */
-  align-items: center; /* Alinea verticalmente los items dentro de esta fila */
-  width: 100%; /* Para que ocupe todo el ancho disponible */
-}
-.form-buttons {
-  /* Alinea los botones a la derecha si lo deseas */
-  justify-content: flex-end; 
-  /* O alinearlos al inicio si prefieres que estén a la izquierda */
-  /* justify-content: flex-start; */ 
+
+.tabla-recetas th {
+  color: aquamarine;
+  font-size: 1.2rem;
 }

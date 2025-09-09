@@ -39,7 +39,7 @@ function Principal() {
                 <dd>Te amaba se fue y te ha dejado...</dd>
           </dl>
         </p>
-        <Boton destino="/Receta" texto="Ir a Receta" />
+        <Boton destino="/ListaReceta" texto="Ir a Lista de Receta" />
     </ContPrincipal> {/* Aca se cierra el componente */}
    </body>
    
