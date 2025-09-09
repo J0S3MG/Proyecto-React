@@ -1,0 +1,53 @@
+/* Esilo de componentes y titulos, etc */
+.enlace
+{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #f9f9f9;
+}
+.imagen-receta 
+{
+  width: 300px;/* Define un ancho y alto fijos para todas las imágenes con esta clase */
+  height: 200px;
+  object-fit: cover;/* Rellena el espacio sin deformar la imagen, recortando si es necesario */
+  object-position: center;/* Opcional: Centra la imagen dentro de su marco */
+}
+
+.titulo
+{
+    color:aqua;
+    text-align: center;
+    font-size: 50px;
+}
+.subtitulo
+{
+    text-decoration: underline;
+    color: aquamarine;
+}
+.texto
+{
+    color: rgb(255, 255, 255);
+}
+
+.tabla
+{
+    color: rgb(255, 255, 255);
+    border-collapse: collapse; /* Unifica los bordes de la tabla y las celdas */
+    width: 100%; /* Opcional: ajusta el ancho de la tabla */
+}
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Espacio entre el label y el input dentro del grupo */
+}
+.form-row {
+  display: flex;
+  gap: 20px; /* Espacio entre los grupos de input/label */
+  align-items: center; /* Alinea verticalmente los items dentro de esta fila */
+  width: 100%; /* Para que ocupe todo el ancho disponible */
+}
+.form-buttons {
+  /* Alinea los botones a la derecha si lo deseas */
+  justify-content: flex-end; 
+  /* O alinearlos al inicio si prefieres que estén a la izquierda */
+  /* justify-content: flex-start; */ 
+}
