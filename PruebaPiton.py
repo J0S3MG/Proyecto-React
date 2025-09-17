@@ -45,7 +45,7 @@ class Dibujo(ABC):
 
     def HolaMondo():
         print("Hola Bitch")
-        
+
     @abstractmethod
     def MetodoAbstracto(self):
         """Este método debe ser implementado por las clases hijas."""
@@ -56,6 +56,21 @@ f = Alumno("Facu",12,8.5)
 l = Alumno("Luiano",9,2.3)
 s = Persona("Samuel",10)
 
-pl = [m,f,l,s,]
-for i in pl:
-    print(i.Descripcion())
+pl = [m,f,l,s]
+#archivo = open("Alumnos.csv", 'x')
+#for i in pl:
+#    print(i.Descripcion())
+#    archivo.write(i.Descripcion() + "\n")
+
+#archivo.close()
+
+funct = lambda lmb: lmb + 1
+
+print(funct(2))
+
+numeros = [1, 2, 3, 4]
+numm = [n * 2 for n in numeros if n % 2 == 0]
+print(numeros, numm)
+    
+
+
