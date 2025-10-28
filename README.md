@@ -25,8 +25,44 @@ Antes de comenzar, asegúrate de tener instalado lo siguiente:
 
 ## 📦 Pasos de Instalación
 
-### 1️⃣ Clonar el repositorio
+### 1️- Clonar el repositorio
 ```bash
 git clone <url-del-repositorio>
+```
+### 2- Ingresar en la carpeta
+```bash
 cd my-react-app
+```
+### 3- Instalar las ddependencias
+```bash
+npm install
+```
+### 4- Ejecutar la aplicación en modo desarrollo
+```bash
+npm run dev
+```
+La aplicación se abrirá automáticamente en tu navegador en: 👉 http://localhost:5173
+
+---
+
+## Imagenes de la App:
+
+**Lista de Recetas**
+
+
+
+
+
+
+---
+
+## Informacion Extra: React + Vite + Node.js
+
+**Node.js**: cumple una funcion parecida a la JVM. Permite ejecutar JavaScript en tu máquina (fuera del navegador), igual que la JVM ejecuta Java en cualquier sistema. Sin Node, no podrías correr ni Vite ni las herramientas de React.
+
+**Vite**: viene siendo una suerte de servidor + empaquetador que durante desarrollo actúa como un servidor local súper rápido y para producción empaqueta tu código en archivos optimizados listos para subir.
+
+**React**: es una librería de UI. Es la caja de herramientas con la que construís tu aplicación: componentes, estados, eventos, etc. No es un framework completo, sino una librería enfocada en la interfaz de usuario.
+
+
 
