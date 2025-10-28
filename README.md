@@ -47,13 +47,13 @@ La aplicación se abrirá automáticamente en tu navegador en: 👉 http://local
 
 ## Imagenes de la App:
 
+# Listado de recetas:
 
 ![Recetas destacadas](https://github.com/user-attachments/assets/dba4174a-874c-4c39-8f6c-f9389c82f467)
 
+# Detalle de receta:
 
-
-
-
+![Recetas detalle](https://github.com/user-attachments/assets/dffaecb3-cf31-4bf7-9b4a-da93daa049f2)
 
 ---
 
