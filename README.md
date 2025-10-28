@@ -47,7 +47,8 @@ La aplicación se abrirá automáticamente en tu navegador en: 👉 http://local
 
 ## Imagenes de la App:
 
-**Lista de Recetas**
+
+![Recetas destacadas](https://github.com/J0S3MG/Proyecto-React/issues/1)
 
 
 
