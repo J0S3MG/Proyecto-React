@@ -1,49 +1,78 @@
-import { Card, CardHeader, CardMedia, CardContent, CardActions, Avatar, Typography, Button, Chip, Box } from '@mui/material';
+import { useState } from 'react';
+import { Card, CardHeader, CardMedia, CardContent, CardActions, Stack, Typography, Button, Chip, Rating } from '@mui/material';
 import { AccessTime } from '@mui/icons-material';
+import PeopleIcon from '@mui/icons-material/People';
 import IndicadorDificultad from './IndicadorDificultad';
+                       
+//Le pasamos la receta para que la organice.    
+function RecetaCard({receta, onViewDetails}) {
+  // Estado para manejar la calificación seleccionada.
+  const [valorCalificacion, setValorCalificacion] = useState(0);
 
-function RecetaCard() {
-  return (//Tamaño de la tarjeta.
-    <Card sx={{ maxWidth: 345, margin: 2 }}> 
+  return ( //Tamaño de la tarjeta.
+    <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column', transition: 'transform 0.2s',
+      '&:hover': {
+        transform: 'translateY(-4px)',
+        boxShadow: 4
+      }
+    }}>
 
-      <CardHeader //Encabezado de la tarjeta.
-        title="Titulo Receta"
-        titleTypographyProps={{
-            align: "center", // 🔹 centra el texto del título
-            variant: "h6",   // opcional: cambia el tamaño del texto
-        }}
-      />
-      
-      <CardMedia //Imagen de la tarjeta.
+      <CardMedia  //Imagen de la tarjeta.
         component="img"
         height="200"
-        image="https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=400"
-        alt="Barcelona Sagrada Familia"
+        image={receta.imagen}
+        alt="Foto de la receta"
         sx={{ objectFit: 'cover' }}
       />
       
+      <CardHeader //Titulo de la tarjeta.
+        title={receta.titulo}
+        titleTypographyProps={{
+          align: "center",
+          variant: "h6",
+        }}
+      />
+
       <CardContent>
-        <Box sx={{ display: 'flex', gap: 1, mb: 2 }}>
-          <Chip 
+        <Stack direction="row" spacing={2} alignItems="center" sx={{ mb: 2 }}>
+          <IndicadorDificultad dif={receta.dificultad} />{/*Indica la dificultad */}
+
+          <PeopleIcon fontSize="small" color='action'/> {/* Indico la cantidad de porciones*/}
+          <Typography variant="body2" color="text.secondary"> 
+           {receta.porciones}
+          </Typography>
+
+          <Chip //Para el tiempo de preparacion
             icon={<AccessTime />} 
-            label="Tiempo de preparacion" 
-            size="big" 
-            variant="outlined" 
+            label={receta.tiempoPreparacion}
+            variant="outlined"
           />
-          <IndicadorDificultad dif={'medio'}/>
-        </Box>
-        
-        <Typography variant="body2" color="text.secondary">
-          Numero de porciones
-        </Typography>
+        </Stack>
+          <Stack direction="row" spacing={2} alignItems="center" sx={{ mb: 2 }}>
+          <Typography variant="body2" color="text.secondary"> {/* Para la calificacion*/}
+            Calificaciones:
+          </Typography>
+          <Rating
+            name="calificacion-receta"
+            value={receta.calificacion}
+            onChange={(event, newValue) => setValorCalificacion(newValue)}
+            precision={0.5}
+          />
+        </Stack>
       </CardContent>
       
-      <CardActions>
-        <Button size="small" variant="contained" fullWidth>
-          Ver itinerario completo
+      <CardActions> {/* Para ir a la receta*/}
+        <Button 
+            size="small" 
+            variant="contained" 
+            fullWidth 
+            onClick={() => onViewDetails(receta.id)}
+        >
+          Ver Preparación
         </Button>
       </CardActions>
     </Card>
   );
 }
+
 export default RecetaCard;

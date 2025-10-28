@@ -7,17 +7,17 @@ const IndicadorDificultad = ({ dif }) => {
   let icon, color, label;
 
   switch (dif) {
-    case "facil":
+    case "Facil":
       icon = <EmojiEmotionsIcon color="success" />;
-      label = "Principiante";
+      label = "Fácil";
       color = "success.main";
       break;
-    case "medio":
+    case "Medio":
       icon = <SentimentNeutralIcon color="warning" />;
-      label = "Intermedio";
+      label = "Medio";
       color = "warning.main";
       break;
-    case "dificil":
+    case "Dificil":
       icon = <WhatshotIcon color="error" />;
       label = "Difícil";
       color = "error.main";
